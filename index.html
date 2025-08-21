@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">CineCatalog</div>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar filmes e séries..." id="searchInput">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="nav-tabs">
+            <button class="tab-btn active" data-tab="todos">Todos</button>
+            <button class="tab-btn" data-tab="filmes">Filmes</button>
+            <button class="tab-btn" data-tab="series">Séries</button>
+            <button class="tab-btn" data-tab="favoritos">Favoritos</button>
+        </div>
+
+        <!-- Carousel de Destaques -->
+        <section class="carousel-section">
+            <h2 class="section-title"> Em Destaque</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="featuredCarousel">
+                    <!-- Items serão adicionados via JavaScript -->
+                </div>
+                <button class="carousel-nav prev" onclick="moveCarousel('prev')">‹</button>
+                <button class="carousel-nav next" onclick="moveCarousel('next')">›</button>
+            </div>
+        </section>
+
+        <!-- Grid de Conteúdo -->
+        <section class="content-section">
+            <h2 class="section-title"> Catálogo Completo</h2>
+            <div class="content-grid" id="contentGrid">
+                <!-- Items serão adicionados via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modalContent">
+                <!-- Conteúdo do modal será adicionado via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="meu.js">
+      </script>
+</body>
+</html>
